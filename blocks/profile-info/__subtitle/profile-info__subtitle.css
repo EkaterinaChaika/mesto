@@ -1,0 +1,19 @@
+.profile-info__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  grid-column: span 2;
+}
+
+@media (max-width: 720px) {
+  .profile-info__subtitle {
+    margin-bottom: 31px;
+  }
+}
+
+@media (max-width: 380px) {
+  .profile-info__subtitle {
+    font-size: 14px;
+  }
+}

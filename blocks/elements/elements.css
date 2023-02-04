@@ -1,0 +1,38 @@
+.elements {
+  display: flex;
+  margin: 50px auto 66px auto;
+  max-width: 880px;
+  flex-wrap: wrap;
+  column-gap: 17px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1080px) {
+  .elements {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 870px) {
+  .elements {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .elements {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .elements {
+    margin: 36px 19px 48px 19px;
+    gap: 20px;
+  }
+}

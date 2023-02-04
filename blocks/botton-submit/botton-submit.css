@@ -1,0 +1,11 @@
+.botton-submit {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  max-width: 358px;
+  cursor: pointer;
+}
+
+.botton-submit:hover {
+  opacity: 80%;
+}
