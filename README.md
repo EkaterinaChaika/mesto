@@ -10,3 +10,5 @@
 * Применение навыков управлять HTML и CSS с помощью JavaScript.
 * Открытие и закрытие попапа, редактирование информации на странице.
 
+Ссылка на проект.
+https://ekaterinachaika.github.io/mesto/index.html

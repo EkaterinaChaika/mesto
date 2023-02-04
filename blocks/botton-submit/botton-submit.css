@@ -4,8 +4,19 @@
   height: 50px;
   max-width: 358px;
   cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .botton-submit:hover {
   opacity: 80%;
+}
+
+@media (max-width: 580px) {
+  .botton-submit {
+    max-width: 238px;
+    height: 46px;
+    font-size: 14px;
+  }
 }
