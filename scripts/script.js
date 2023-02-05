@@ -14,8 +14,8 @@ function closePopup() {
 }
 
 let formElement = document.querySelector(".form");
-let nameInput = document.querySelector(".form-input__type_name");
-let jobInput = document.querySelector(".form-input__type_jobe");
+let nameInput = document.querySelector(".form__info_type_name");
+let jobInput = document.querySelector(".form__info_type_jobe");
 
 const profileTitle = document.querySelector(".profile-info__title");
 const profileSubtitle = document.querySelector(".profile-info__subtitle");
