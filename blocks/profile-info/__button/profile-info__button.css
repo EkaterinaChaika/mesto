@@ -7,16 +7,19 @@
   background-repeat: no-repeat;
   background-position: center;
   justify-self: left;
+  cursor: pointer;
 }
 
 .profile-info__button:hover {
   opacity: 80%;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 720px) {
   .profile-info__button {
     width: 18px;
     height: 18px;
-    margin: 0 0 0 10px;
+    position: absolute;
+    top: 8px;
+    right: 18px;
   }
 }

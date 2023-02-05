@@ -2,13 +2,23 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 1.1;
-  margin: 0 18px 16px 0;
-  justify-self: right;
+  margin: 0 21px 10px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 @media (max-width: 720px) {
   .profile-info__title {
-    margin: 0 10px 10px 0;
+    margin-right: 0;
+    justify-self: right;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-info__title {
+    font-size: 33px;
   }
 }
 
@@ -16,6 +26,5 @@
   .profile-info__title {
     font-size: 27px;
     line-height: 1.2;
-    margin-bottom: 6px;
   }
 }

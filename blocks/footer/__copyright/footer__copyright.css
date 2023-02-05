@@ -3,6 +3,8 @@
   font-size: 18px;
   line-height: 1.2;
   color: #545454;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 430px) {

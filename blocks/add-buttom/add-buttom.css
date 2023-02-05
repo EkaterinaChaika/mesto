@@ -9,6 +9,7 @@
   background-position: center;
   align-self: flex-end;
   margin: auto 0;
+  cursor: pointer;
 }
 
 .add-button:hover {
@@ -23,9 +24,11 @@
 
 @media (max-width: 720px) {
   .add-button {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     align-self: center;
     width: 150px;
+    padding: 0;
   }
 }
 

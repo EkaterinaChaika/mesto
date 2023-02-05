@@ -14,13 +14,11 @@
   </header>
   <main>
     <section class="profile">
-      <div class="avatar">
-        <img src="./images/Avatar.jpg" class="avatar__image" alt="Аватар">
-      </div>
+      <img src="./images/Avatar.jpg" class="avatar" alt="Аватар">
       <div class="profile-info">
         <h1 class="profile-info__title">Жак-Ив Кусто</h1>
         <button class="profile-info__button" type="button"></button>
-        <h2 class="profile-info__subtitle">Исследователь океана</h2>
+        <p class="profile-info__subtitle">Исследователь океана</p>
       </div>
       <button class="add-button" type="button"></button>
     </section>
@@ -76,16 +74,18 @@
   <div class="popup">
     <div class="popup__container">
       <button type="button" class="button-close"></button>
+      <h3 class="form__title">Редактировать профиль</h3>
       <form class="form" name="profile-form" action="#" method="get">
-        <h3 class="form__title">Редактировать профиль</h3>
-        <input class="form__info form-name" placeholder="Жак-Ив Кусто" type="text" name="name" id="name" required>
-        <input class="form__info form-job" placeholder="Исследователь океана" type="text" name="job" id="job" required>
+        <input class="form__info form__input_type_name" placeholder="Жак-Ив Кусто" type="text" name="name" id="name"
+          required>
+        <input class="form__info form__input_type_jobe" placeholder="Исследователь океана" type="text" name="job"
+          id="job" required>
         <button type="submit" class="botton-submit">Сохранить</button>
       </form>
     </div>
   </div>
 
-  <script src="./pages/script.js"></script>
-
+  <script src="./scripts/script.js"></script>
 </body>
+
 </html>

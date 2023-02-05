@@ -4,11 +4,16 @@
   line-height: 1.2;
   margin: 0;
   grid-column: span 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  justify-self: left;
+  width: 100%;
 }
 
 @media (max-width: 720px) {
   .profile-info__subtitle {
-    margin-bottom: 31px;
+    justify-self: center;
   }
 }
 

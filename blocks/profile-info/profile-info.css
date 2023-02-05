@@ -4,18 +4,15 @@
   grid-template-rows: auto;
   align-items: center;
   grid-row: 16px;
-  margin: auto auto auto 0;
-  justify-items: center;
+  margin: 22px auto auto 0;
 }
 
 @media (max-width: 720px) {
   .profile-info {
-  margin: 0;
-  }
-}
-
-@media (max-width: 380px) {
-  .profile-info {
-  min-width: 100%;
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
   }
 }

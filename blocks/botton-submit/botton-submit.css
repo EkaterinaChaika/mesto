@@ -7,6 +7,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
+  border: none;
+  padding: 0;
+  margin: 18px 0 0 0;
 }
 
 .botton-submit:hover {
@@ -16,7 +19,8 @@
 @media (max-width: 580px) {
   .botton-submit {
     max-width: 238px;
-    height: 46px;
     font-size: 14px;
+    margin-top: 15px;
+    height: 46px;
   }
 }
