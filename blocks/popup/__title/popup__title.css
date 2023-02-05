@@ -1,4 +1,4 @@
-.popap__title {
+.popup__title {
   font-weight: 900;
   font-size: 24px;
   line-height: 1.2;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 580px) {
-  .popap__title {
+  .popup__title {
     font-size: 18px;
     margin: 25px 22px 75px 22px;
   }

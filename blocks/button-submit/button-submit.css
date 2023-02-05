@@ -1,4 +1,4 @@
-.botton-submit {
+.button-submit {
   background-color: #000;
   color: #fff;
   height: 50px;
@@ -12,12 +12,12 @@
   margin: 18px 0 0 0;
 }
 
-.botton-submit:hover {
+.button-submit:hover {
   opacity: 80%;
 }
 
 @media (max-width: 580px) {
-  .botton-submit {
+  .button-submit {
     max-width: 238px;
     font-size: 14px;
     margin-top: 15px;

@@ -8,8 +8,9 @@
   background-repeat: no-repeat;
   background-position: center;
   align-self: flex-end;
-  margin: auto 0;
+  margin: auto 0 auto 10px;
   cursor: pointer;
+  flex: 0 0 auto;
 }
 
 .add-button:hover {
@@ -26,6 +27,7 @@
   .add-button {
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
     align-self: center;
     width: 150px;
     padding: 0;

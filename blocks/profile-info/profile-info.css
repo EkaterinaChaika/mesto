@@ -9,10 +9,16 @@
 
 @media (max-width: 720px) {
   .profile-info {
-    margin: 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    column-gap: 10px;
+    margin-bottom: 31px;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-info {
+    grid-template-columns: 6fr 1fr;
     width: 100%;
   }
 }

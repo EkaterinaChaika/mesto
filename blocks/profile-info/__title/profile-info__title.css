@@ -6,13 +6,20 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .profile-info__title {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 720px) {
   .profile-info__title {
     margin-right: 0;
-    justify-self: right;
+    margin-bottom: 9px;
+    justify-self: center;
   }
 }
 
@@ -26,5 +33,6 @@
   .profile-info__title {
     font-size: 27px;
     line-height: 1.2;
+    justify-self: end;
   }
 }

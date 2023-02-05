@@ -8,7 +8,7 @@
   white-space: nowrap;
   overflow: hidden;
   justify-self: left;
-  width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 720px) {
