@@ -20,9 +20,9 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__title/popap__title.css);
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__info/form__info.css);
-@import url(../blocks/form/__title/form__title.css);
 @import url(../blocks/botton-submit/botton-submit.css);
 @import url(../blocks/button-close/button-close.css);
 @import url(../blocks/footer/footer.css);
