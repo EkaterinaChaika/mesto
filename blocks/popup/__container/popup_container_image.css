@@ -1,4 +1,4 @@
-.popup__container_image {
+.popup_container_image {
   background-color: transparent;
   display: flex;
   margin: 0 auto;
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 580px) {
-  .popup__container_image {
+  .popup_container_image {
     align-items: center;
   }
 }
