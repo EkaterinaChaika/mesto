@@ -33,6 +33,20 @@ const popupPlace = document.querySelector(".popup_type_place");
 const popupImg = document.querySelector(".popup_type_img");
 const popupBtnOpenPlace = document.querySelector(".add-button");
 const popupBtnClosePlace = document.querySelector(".button-close_type_place");
+const formElement = document.querySelector(".form-profile");
+const nameInput = document.querySelector(".form__info_type_name");
+const jobInput = document.querySelector(".form__info_type_jobe");
+const profileTitle = document.querySelector(".profile-info__title");
+const profileSubtitle = document.querySelector(".profile-info__subtitle");
+const template = document.querySelector(".element-template").content.querySelector(".element");
+const elements = document.querySelector(".elements");
+const submitBtnPlace = document.querySelector(".button-submit_type_place");
+const namePlace = document.querySelector(".form__info_place_name");
+const linkPlace = document.querySelector(".form__info_img_link");
+const formPlace = document.querySelector(".form-place");
+const popupImage = document.querySelector(".popup__image");
+const popupImageTitle = document.querySelector(".popup__image-title");
+const popupBtnCloseImage = document.querySelector(".button-close_type_img");
 
 popupBtnOpen.addEventListener("click", () => {
   openPopupProfile()
@@ -56,12 +70,6 @@ function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
 
-const formElement = document.querySelector(".form-profile");
-const nameInput = document.querySelector(".form__info_type_name");
-const jobInput = document.querySelector(".form__info_type_jobe");
-const profileTitle = document.querySelector(".profile-info__title");
-const profileSubtitle = document.querySelector(".profile-info__subtitle");
-
 function handleFormSubmit(evt) {
   evt.preventDefault();
   console.log(nameInput.value);
@@ -80,12 +88,6 @@ popupBtnOpenPlace.addEventListener("click", () => {
 popupBtnClosePlace.addEventListener("click", () => {
   closePopup(popupPlace)
 });
-
-const template = document.querySelector(".element-template").content.querySelector(".element");
-const elements = document.querySelector(".elements");
-const submitBtnPlace = document.querySelector(".button-submit_type_place");
-const namePlace = document.querySelector(".form__info_place_name");
-const linkPlace = document.querySelector(".form__info_img_link");
 
 function createCard(item) {
   const card = template.cloneNode(true);
@@ -110,18 +112,13 @@ function renderCards(initialCards) {
 
 renderCards(initialCards);
 
-submitBtnPlace.addEventListener("click", (e) => {
-  // e.preventDefault();
-  const card = createCard({ name: namePlace.value, link: linkPlace.value });
-  elements.prepend(card);
-  closePopup(popupPlace);
-  // e.target.reset();
-});
-
-const formPlace = document.querySelector(".form-place");
-const popupImage = document.querySelector(".popup__image");
-const popupImageTitle = document.querySelector(".popup__image-title");
-const popupBtnCloseImage = document.querySelector(".button-close_type_img");
+formPlace.addEventListener("submit", (e) => {
+   e.preventDefault();
+   const card = createCard({ name: namePlace.value, link: linkPlace.value });
+   elements.prepend(card);
+   closePopup(popupPlace);
+   e.target.reset();
+  });
 
 popupBtnCloseImage.addEventListener("click", () => {
   closePopup(popupImg);
