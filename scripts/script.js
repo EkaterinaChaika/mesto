@@ -133,4 +133,19 @@ elements.addEventListener("click", function createPopupImage(evt) {
   }
 });
 
+const popupOverlay = document.querySelectorAll(".popup");
 
+popupOverlay.forEach((popup) => {
+  popup.addEventListener("click", (evt) => {
+    if (evt.target === evt.currentTarget) {
+    closePopup(evt.target);
+    }
+  });
+});
+
+const closePopupEsc = (evt) => {
+  if (evt.code === "Escape") {
+    const popupOpened = document.querySelector(".popup_opened");
+    closePopup(popupOpened);
+  };
+};
