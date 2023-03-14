@@ -16,11 +16,3 @@
     padding-bottom: 8px;
   }
 }
-
-.form__info:invalid {
-  border-bottom: 1px solid #FF0000;
-}
-
-.form__info.form__info_type_error {
-  border-bottom:1px solid #FF0000;
-}
