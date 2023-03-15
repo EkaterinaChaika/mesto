@@ -29,17 +29,25 @@ const enableValidation = (config) => {
   });
 }
 
+const hideInputErrors = (input, errorElement, config) => {
+  input.classList.remove(config.inputErrorClass);
+  errorElement.textContent = '';
+};
+
+const showInputErrors = (input, errorElement, config) => {
+  input.classList.add(config.inputErrorClass);
+  errorElement.textContent = input.validationMessage;
+};
+
 const handleFormInput = (evt, config) => {
   const input = evt.target;
   const inputId = input.id;
   const errorElement = document.querySelector(`#${inputId}-error`);   //span элемент c id : "inputID + -errorr"
 
   if (input.validity.valid) {
-    input.classList.remove(config.inputErrorClass)
-    errorElement.textContent = '';
+    hideInputErrors(input, errorElement, config);
   } else {
-    input.classList.add(config.inputErrorClass);
-    errorElement.textContent = input.validationMessage;
+    showInputErrors(input, errorElement, config);
   }
 }
 
@@ -72,18 +80,3 @@ const setEventListeners = (form, config) => {
 
 enableValidation(validationConfig);
 
-const resetInput = (config) => {
-  const inputList = document.querySelectorAll(config.inputSelector);
-
-  inputList.forEach((input) => {
-    input.classList.remove(config.inputErrorClass);
-    input.nextElementSibling.textContent = '';
-  });
-}
-
-const resetSubmit = (config) => {
-  const buttonSubmit = document.querySelectorAll(config.submitButtonSelector);
-  buttonSubmit.forEach((button) => {
-    disableButton(config, button);
-  });
-}

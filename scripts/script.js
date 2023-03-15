@@ -47,9 +47,11 @@ const formPlace = document.querySelector(".form-place");
 const popupImage = document.querySelector(".popup__image");
 const popupImageTitle = document.querySelector(".popup__image-title");
 const popupBtnCloseImage = document.querySelector(".button-close_type_img");
+const inputForm = document.querySelector(".form__info");
 
 popupBtnOpen.addEventListener("click", () => {
-  openPopupProfile()
+  openPopupProfile();
+  resetInput(formElement);
 });
 
 popupBtnClose.addEventListener("click", () => {
@@ -79,7 +81,7 @@ function closePopupEsc(evt) {
   };
 };
 
-function handleFormSubmit(evt) {
+function submitEditProfileForm(evt) {
   evt.preventDefault();
   console.log(nameInput.value);
   console.log(jobInput.value);
@@ -88,17 +90,24 @@ function handleFormSubmit(evt) {
   closePopup(popupProfile);
 }
 
-formElement.addEventListener('submit', handleFormSubmit);
-
-function disableButtonSubmit(button) {
-  button.classList.add('button-submit__inactive');
-  button.disabled = true;
-}
+formElement.addEventListener('submit', submitEditProfileForm);
 
 popupBtnOpenPlace.addEventListener("click", () => {
   openPopup(popupPlace);
-  disableButtonSubmit(submitBtnPlace);
+  namePlace.value = "";
+  linkPlace.value = "";
+  resetInput(formPlace);
+  const config = { inactiveButtonClass: 'button-submit__inactive' };
+  disableButton(config, submitBtnPlace);
 });
+
+const resetInput = (form) => {
+  const inputList = form.querySelectorAll('.form__info');
+  inputList.forEach((input) => {
+    input.classList.remove('form__info_error');
+    input.nextElementSibling.textContent = '';
+  });
+}
 
 popupBtnClosePlace.addEventListener("click", () => {
   closePopup(popupPlace)
@@ -106,15 +115,23 @@ popupBtnClosePlace.addEventListener("click", () => {
 
 function createCard(item) {
   const card = template.cloneNode(true);
+  const elementImage = card.querySelector(".element__image");
   card.querySelector(".element__title").textContent = item.name;
-  card.querySelector(".element__image").src = item.link;
-  card.querySelector(".element__image").alt = item.name;
+  elementImage.src = item.link;
+  elementImage.alt = item.name;
   card.querySelector(".element__button-like").addEventListener("click", (evt) => {
     evt.target.classList.toggle("element__button-like_active");
   });
   card.querySelector(".element__button-delete").addEventListener("click", () => {
     card.remove();
   });
+  elementImage.addEventListener("click", () => {
+    popupImage.src = item.link;
+    popupImageTitle.alt = item.name;
+    popupImageTitle.textContent = item.name;
+    openPopup(popupImg);
+  });
+
   return card
 }
 
@@ -137,15 +154,6 @@ formPlace.addEventListener("submit", (e) => {
 
 popupBtnCloseImage.addEventListener("click", () => {
   closePopup(popupImg);
-});
-
-elements.addEventListener("click", function createPopupImage(evt) {
-  if (evt.target.closest(".element__image")) {
-    popupImage.src = evt.target.closest(".element__image").src;
-    popupImageTitle.alt = evt.target.closest(".element__image").alt;
-    popupImageTitle.textContent = evt.target.closest(".element__image").alt;
-    openPopup(popupImg);
-  }
 });
 
 const popupOverlay = document.querySelectorAll(".popup");
